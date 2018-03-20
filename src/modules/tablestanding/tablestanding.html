@@ -1,0 +1,39 @@
+<template>
+  <require from="../../resources/value-converters/sortStandingsTable"></require>
+  <section class="au-animate">
+  <div class="standings-container container-fluid">
+    <table class="table table-hover team-standings-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Equipe</th>
+          <th></th>
+          <th>M</th>
+          <th>V</th>
+          <th>N</th>
+          <th>D</th>
+          <th class="d-none d-sm-table-cell">B+</th>
+          <th class="d-none d-sm-table-cell">B-</th>
+          <th class="d-none d-sm-table-cell">Diff</th>
+          <th>PTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr repeat.for="team of results">
+          <th class="position" scope="row">${$index  + 1}</th>
+          <td class="logo-table"><img src="${team.logo_url}" width="80" class="img-fluid" /></td>
+          <td class="team-name-table">${team.team_name}</td>
+          <td>${team.played}</td>
+          <td>${team.wins}</td>
+          <td>${team.draws}</td>
+          <td>${team.lost}</td>
+          <td class="d-none d-sm-table-cell">${team.goalsfor}</td>
+          <td class="d-none d-sm-table-cell">${team.goalsagainst}</td>
+          <td class="d-none d-sm-table-cell">${team.goal_diff}</td>
+          <td>${team.score}</td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+</section>
+</template>

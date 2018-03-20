@@ -1,0 +1,19 @@
+
+.scoreboard-admin {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #323232;
+    padding: 10px;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.submit-btn button {
+    margin: 10px 0;
+}
+
+.team-logo {
+    grid-column: span 2;
+    text-align: center;
+}

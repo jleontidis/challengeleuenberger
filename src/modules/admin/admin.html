@@ -1,0 +1,37 @@
+<template>
+    <require from="../../resources/value-converters/dateFormatValueConverter"></require>
+    <form>
+        <div class="col-12" repeat.for="match of matches" >
+              <div class="heure">
+                 Heure: ${match.match_time | dateFormat}
+              </div>
+              <div class="scoreboard-admin">
+                <div class="team-logo">
+                  <img src="${teams[match.team_home_id - 1].logoUrl}" class="img-fluid" alt="Logo home team" /><br>
+                  ${teams[match.team_home_id - 1].team_name}
+                </div>
+                <div class="score-home-container">
+                  <input type="text" class="form-control" value.bind="match.score_home">
+                  <br>
+                  <input type="text" class="form-control" value.bind="match.score_home_2">
+                </div>
+                <div class="score-away-container">
+                    <input type="text" class="form-control" value.bind="match.score_away">
+                    <br>
+                    <input type="text" class="form-control" value.bind="match.score_away_2">
+                </div>
+                <div class="submit-btn">
+                  <button class="btn btn-primary" click.delegate="updateMatch('first',match)">1e mi-temps</button>
+                  <button class="btn btn-primary" click.delegate="updateMatch('second', match)">2e mi-temps</button> 
+                </div>            
+                <div class="team-logo">
+                  <img src="${teams[match.team_away_id - 1].logoUrl}" class="img-fluid" alt="Logo home team" />       <br>
+                  ${teams[match.team_away_id - 1].team_name}  
+                </div>
+                <div class="end-button">
+                  <button class="btn btn-primary" click.delegate="endMatch(match)">Fin Match</button>
+                </div>
+              </div>
+          </div>
+    </form>
+</template>

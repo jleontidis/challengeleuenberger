@@ -1,0 +1,53 @@
+<template>
+    <require from="../../resources/value-converters/dateFormatValueConverter"></require>
+    <require from="../../resources/value-converters/showOnlyValueConverter"></require>
+    <!-- | showOnly: 2 -->
+    <section>
+    <div class="wrapper">
+        <div class="item" repeat.for="match of matches | showOnly: 2 "> 
+            <div class="side">
+                <h1 class="alert alert-primary"><span class="matchtime">${match.match_time | dateFormat}</span> ${match.location}</h1>
+            </div>
+            <div class="img">
+                <img class="home-team-logo grid-img-home" src="${teams[match.team_home_id - 1].logoUrl}" />
+            </div>
+           
+            <div class="scoreboard">
+                <div class="row">
+                    1e mi-temps
+                </div>
+                <div class="score">
+                    <span class="score_home">${match.score_home}</span>
+                    <span class="score_away">${match.score_away}</span>                 
+                </div>
+                <div class="row">
+                    2e mi-temps
+                </div>
+                <div class="score">
+                        <span class="score_home">${match.score_home_2}</span>
+                        <span class="score_away">${match.score_away_2}</span>                 
+                </div>
+            </div>
+            <div class="img">
+                 <img class="away-team-logo grid-img-away" src="${teams[match.team_away_id - 1].logoUrl}" />
+            </div>
+            <!-- <div class="side">côté est</div>         -->
+        </div>
+    </div>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <br><br>
+          <div class="sponsors-container">
+            <!-- <img src="assets/sponsor/logo01.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo02.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo03.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo04.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo05.jpg" class="img-fluid" /> -->
+            <img src="assets/img/Logo_2018.png" class="img-fluid" />
+          </div>
+        </div>
+      </div><!-- end .row -->
+    </div>
+</section>
+</template>

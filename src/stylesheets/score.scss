@@ -1,0 +1,83 @@
+
+/* 
+*
+*
+* Match Score
+*
+*/
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, 1fr ) ;
+    color: #fff;
+}
+
+.item {
+    padding: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    align-items: center;
+
+    @media screen and (min-width : 768px){
+        grid-column: span 6;
+    }
+}
+
+.matchtime {
+    position: absolute;
+    left: 0;
+    background-color: #d01f3a;
+    padding: 12px;
+    top: 0;
+
+    
+}
+
+.side .alert {
+    font-size: 1rem;
+
+    @media screen and (min-width:768px){
+        font-size: 37,5px;
+    }
+}
+
+.grid-img-home ,.grid-img-away {
+    width: 80px;
+
+    @media screen and (min-width : 768px){
+        width: 250px;
+    }
+}
+
+.side {
+    grid-column: span 12;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+.scoreboard {
+    grid-column: span 10;
+}
+
+.row {
+    font-size: 1rem;
+    justify-content: center;
+    line-height: 40px;
+}
+
+.score span {
+    
+    background-color: #323232;
+    font-size: 45px;
+    color: #fff;
+    font-family: 'Bowlby_One_SC';
+    margin: 5px;
+    padding: 5px;
+}

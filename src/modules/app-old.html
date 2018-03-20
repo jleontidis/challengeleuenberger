@@ -1,0 +1,38 @@
+<template>
+  <require from="stylesheets/style.css"></require>
+  <div class="app-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-12">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-starwars">
+              <a class="navbar-brand" href="#">${router.title}</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mr-auto">
+                      <li repeat.for="row of router.navigation" class="nav-item ${row.isActive ? 'active': ''}">
+                          <a class="nav-link" href.bind="row.href">${row.title}</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+        </div> -->
+        <div class="col-12">
+        <router-view></router-view>
+      </div><!-- end .col-12 -->
+      </div><!-- end .row -->
+      <div class="row">
+        <div class="col-12">
+          <div class="sponsors-container">
+            <img src="assets/sponsor/logo01.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo02.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo03.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo04.jpg" class="img-fluid" />
+            <img src="assets/sponsor/logo05.jpg" class="img-fluid" />
+          </div>
+        </div>
+      </div><!-- end .row -->
+    </div><!-- end .container -->
+  </div>
+</template>
